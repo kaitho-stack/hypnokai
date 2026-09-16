@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>hypnokai.com</title>
+  <meta name="description" content="HypnoKai — Artist, Vocalist, Musician, and Original Songwriter. Structuring operations, logic, and sound. Based in Western Australia." />
+
+  <!-- Security & Privacy Policies -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+  <link rel="canonical" href="https://hypnokai.com/" />
+
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="hypnokai.com" />
+  <meta property="og:description" content="HypnoKai — Artist, Vocalist, Musician, and Original Songwriter. Based in Western Australia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hypnokai.com/" />
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Three.js Importmap for Modern ESM Post-Processing -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <!-- GSAP for Magnetic Physics & Transitions -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body>
+
+  <!-- WebGL 3D Glass Sculpture & Chromatic Canvas -->
+  <div id="canvas-container" aria-hidden="true"></div>
+
+  <!-- GSAP-Powered Fluid Magnetic Cursor -->
+  <div id="custom-cursor" aria-hidden="true">
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring">
+      <span id="cursor-label"></span>
+    </div>
+  </div>
+
+  <!-- Top HUD Header -->
+  <header class="site-header">
+    <a href="#hero" class="brand-mark magnetic" data-magnetic-strength="0.25">
+      <span>KAI THORPE</span>
+      <span class="dot"></span>
+    </a>
+
+    <div class="hud-status-pill">
+      <span class="pulse-indicator"></span>
+      <span>WESTERN AUSTRALIA // ACTIVE</span>
+    </div>
+  </header>
+
+  <!-- Main Scrollable Content (Driven by Lenis) -->
+  <main class="page-scroller">
+
+    <!-- Viewport: Landing / Hero -->
+    <section class="viewport-section hero-viewport" id="hero">
+      <h1 class="hero-headline" id="hero-headline" aria-label="KAI THORPE.">
+        <span class="hero-word" aria-hidden="true">
+          <span class="hero-char" data-index="0">K</span>
+          <span class="hero-char" data-index="1">A</span>
+          <span class="hero-char" data-index="2">I</span>
+        </span>
+        <span class="hero-space" aria-hidden="true">&nbsp;</span>
+        <span class="hero-word" aria-hidden="true">
+          <span class="hero-char" data-index="3">T</span>
+          <span class="hero-char" data-index="4">H</span>
+          <span class="hero-char" data-index="5">O</span>
+          <span class="hero-char" data-index="6">R</span>
+          <span class="hero-char" data-index="7">P</span>
+          <span class="hero-char" data-index="8">E</span>
+          <span class="hero-char period" data-index="9">.</span>
+        </span>
+      </h1>
+
+      <p class="hero-subheadline">
+        Structuring operations, logic, and sound.
+      </p>
+
+      <nav class="nav-index-container" aria-label="Portfolio Index">
+        <a href="#operations" class="nav-index-link magnetic" data-magnetic-strength="0.3" data-cursor-text="SCALE">
+          01 // Operations
+        </a>
+        <a href="#logic" class="nav-index-link magnetic" data-magnetic-strength="0.3" data-cursor-text="CODE">
+          02 // Logic
+        </a>
+        <a href="#hypnokai" class="nav-index-link magnetic" data-magnetic-strength="0.3" data-cursor-text="HYPNO">
+          03 // HypnoKai
+        </a>
+        <a href="#audio" class="nav-index-link magnetic" data-magnetic-strength="0.3" data-cursor-text="MUSIC">
+          04 // Music Player
+        </a>
+      </nav>
+
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Section 01: Operations & Scale -->
+    <section class="viewport-section section-operations" id="operations">
+      <div class="content-card-wrapper profile-grid-layout">
+        <div class="profile-portrait-column">
+          <div class="floating-portrait-container">
+            <div class="portrait-frame floating-object magnetic" data-cursor-text="KAI">
+              <img src="assets/images/kai-professional.png" alt="Kai Thorpe — Operations & Scale" class="portrait-img" loading="eager" draggable="false" />
+              <div class="portrait-glass-overlay"></div>
+            </div>
+            <div class="floating-shadow-disc" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="profile-text-column">
+          <span class="section-label">01 // Operations &amp; Scale</span>
+          <h2 class="section-title">01 — Operations</h2>
+          <p class="section-body">
+            Managing complex environments and retail infrastructure across the metropolitan region. My background is in aligning teams, managing high-volume logistics, and building the internal, modular tools that make daily operations seamless and efficient.
+          </p>
+
+          <!-- Interactive Micro-Tags -->
+          <div class="micro-tags-container" role="list" aria-label="Operations Capabilities">
+            <button type="button" class="micro-tag magnetic" data-cursor-text="VIEW" data-desc="Regional Management: Multi-hub operational coordination and staff alignment across Western Australia.">
+              Regional Management
+            </button>
+            <button type="button" class="micro-tag magnetic" data-cursor-text="VIEW" data-desc="Process Optimization: Systematic cycle latency reduction and lean workflow orchestration.">
+              Process Optimization
+            </button>
+            <button type="button" class="micro-tag magnetic" data-cursor-text="VIEW" data-desc="Custom Sales Tooling: Specialized local-first utilities and inventory synchronizers.">
+              Custom Sales Tooling
+            </button>
+          </div>
+
+          <div class="card-action-bar">
+            <button type="button" class="pill pill-accent magnetic" data-open-drawer="drawer-operations" data-cursor-text="OPEN">
+              Examine Architecture
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5L8 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02: Code & Computation -->
+    <section class="viewport-section section-logic" id="logic">
+      <div class="content-card-wrapper">
+        <span class="section-label">02 // Code &amp; Computation</span>
+        <h2 class="section-title">02 — Logic</h2>
+        <p class="section-body">
+          Exploring the mechanics beneath the interface. My current focus is diving into computer science and physical systems—studying how things actually work at a fundamental level. I build modular, local-first applications and write code to solve tangible problems, treating software as a practical extension of systems thinking.
+        </p>
+
+        <!-- Interactive Micro-Tags -->
+        <div class="micro-tags-container" role="list" aria-label="Logic Capabilities">
+          <button type="button" class="micro-tag magnetic" data-cursor-text="CODE" data-desc="Systems Architecture: Modular, state-driven software paradigms prioritizing deterministic data flow.">
+            Systems Architecture
+          </button>
+          <button type="button" class="micro-tag magnetic" data-cursor-text="PHYSICS" data-desc="Applied Physics & CS: Computational geometry, shader physics, and spatial mathematics.">
+            Applied Physics &amp; CS
+          </button>
+          <button type="button" class="micro-tag magnetic" data-cursor-text="DEV" data-desc="Local Software Dev: High-speed, local-first software utilities crafted without cloud overhead.">
+            Local Software Dev
+          </button>
+        </div>
+
+        <div class="card-action-bar">
+          <button type="button" class="pill pill-accent magnetic" data-open-drawer="drawer-logic" data-cursor-text="OPEN">
+            Inspect Systems
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5L8 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Viewport: Hypnokai Alter Ego Hero Card -->
+    <section class="viewport-section section-hypnokai-hero" id="hypnokai">
+      <div class="content-card-wrapper hypnokai-hero-card">
+        <div class="hypno-hero-split">
+          <div class="hypno-hero-content">
+            <div class="hypno-badge-row">
+              <span class="hypno-pulse-dot"></span>
+              <span class="hypno-tag-label">ORIGINAL SONGWRITER · ARTIST · VOCALIST · MUSICIAN</span>
+              <span class="hypno-geo-tag">WA // HYPNOKAI</span>
+            </div>
+
+            <h2 class="hypno-headline">HYPNOKAI<span class="hypno-glow-dot">.</span></h2>
+            <p class="hypno-tagline">
+              Artist · Lead Vocalist · Multi-Instrumentalist · Original Songwriter
+            </p>
+
+            <p class="hypno-bio">
+              The creative musical identity of Kai Thorpe. Artist, lead vocalist, musician, and original songwriter based in Western Australia. Every piece is written, performed, tracked, and sung from the ground up—moving beyond generic soundscapes into authentic songwriting, raw vocal expression, live multi-instrumentation, and deliberate electronic architecture.
+            </p>
+
+            <div class="hypno-disciplines-row" role="list">
+              <span class="hypno-pill-tag">Original Songwriting</span>
+              <span class="hypno-pill-tag">Lead Vocals &amp; Phrasing</span>
+              <span class="hypno-pill-tag">Multi-Instrumentalist</span>
+              <span class="hypno-pill-tag">Independent Master Delivery</span>
+            </div>
+
+            <!-- Instagram Social Link -->
+            <div class="hypno-social-row">
+              <a href="https://instagram.com/hypno_kai" target="_blank" rel="noopener noreferrer" class="hypno-insta-pill magnetic" data-cursor-text="INSTA" aria-label="Follow HypnoKai on Instagram @hypno_kai">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <span>@hypno_kai</span>
+                <span class="insta-arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+          <div class="hypno-hero-visual" aria-hidden="true">
+            <div class="floating-performer-container">
+              <img src="assets/images/hypnokai-pose.png" alt="HypnoKai Performer Pose" class="hypnokai-performer-img floating-object" loading="eager" draggable="false" oncontextmenu="return false;" />
+              <div class="floating-shadow-disc hypno-shadow-disc" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 04: HypnoKai Music Player Tool -->
+    <section class="viewport-section section-audio" id="audio">
+      <div class="content-card-wrapper audio-deck-card-wrapper">
+        <div class="deck-top-meta">
+          <span class="section-label">04 // Original Discography</span>
+          <div class="deck-badge-group">
+            <a href="https://instagram.com/hypno_kai" target="_blank" rel="noopener noreferrer" class="deck-insta-link magnetic" title="Follow @hypno_kai on Instagram">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>@hypno_kai</span>
+            </a>
+            <span class="deck-format-badge">HYPNOKAI MUSIC PLAYER</span>
+            <span class="deck-channel-badge">20 TRACK DISCOGRAPHY</span>
+          </div>
+        </div>
+
+        <h2 class="section-title">04 — Original Songs &amp; Works</h2>
+        <p class="section-body">
+          Original tracks written, voiced, and tracked by <strong>HypnoKai</strong>. Listen directly through the built-in player below—engineered with raw vocal expression, live instruments, and studio recordings crafted in Western Australia.
+        </p>
+
+        <!-- HypnoKai Clean Music Player (Protected Audio Stream) -->
+        <div class="hypnokai-player-card" id="hypnokai-player" oncontextmenu="return false;">
+          <div class="player-main-grid">
+            
+            <!-- Left: Artwork & Now Playing -->
+            <div class="player-artwork-column">
+              <div class="album-art-stage" oncontextmenu="return false;">
+                <div class="album-art-glow" id="album-art-glow"></div>
+                <div class="album-art-wrapper" id="album-art-wrapper">
+                  <img src="assets/art/all-relative.png" alt="Album Art" id="player-album-art" class="player-album-art" draggable="false" oncontextmenu="return false;" />
+                  <div class="vinyl-groove-overlay"></div>
+                </div>
+              </div>
+
+              <div class="now-playing-meta">
+                <span class="player-artist-tag" id="player-artist">HYPNOKAI</span>
+                <h3 class="player-track-title" id="player-title">All Relative</h3>
+                <p class="player-track-desc" id="player-desc">Original songwriting, vocal performance, and melodic arrangement by HypnoKai.</p>
+              </div>
+
+              <!-- Real-time Mini Oscilloscope -->
+              <div class="player-oscilloscope-container">
+                <canvas id="deck-oscilloscope-canvas" width="480" height="48"></canvas>
+              </div>
+
+              <!-- Seeker & Duration -->
+              <div class="player-scrubber-row">
+                <span class="time-readout" id="time-current">00:00</span>
+                <div class="scrubber-track-container" id="scrubber-container">
+                  <div class="scrubber-fill" id="scrubber-fill"></div>
+                  <input type="range" class="scrubber-input" id="player-scrubber" min="0" max="100" step="0.1" value="0" aria-label="Seek track position" />
+                </div>
+                <span class="time-readout" id="time-duration">04:06</span>
+              </div>
+
+              <!-- Main Transport Controls -->
+              <div class="player-controls-row">
+                <button type="button" class="player-btn prev-btn magnetic" id="player-prev-btn" title="Previous Track" aria-label="Previous Track" data-cursor-text="PREV">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                </button>
+
+                <button type="button" class="player-btn play-main-btn magnetic" id="player-play-btn" title="Play / Pause" aria-label="Play or Pause" data-cursor-text="PLAY">
+                  <svg class="icon-play" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  <svg class="icon-pause" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+
+                <button type="button" class="player-btn next-btn magnetic" id="player-next-btn" title="Next Track" aria-label="Next Track" data-cursor-text="NEXT">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                </button>
+
+                <!-- Volume Control -->
+                <div class="player-volume-cluster">
+                  <button type="button" class="vol-mute-btn" id="player-mute-btn" title="Mute / Unmute" aria-label="Mute or Unmute">
+                    <svg class="icon-vol-on" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    <svg class="icon-vol-muted" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                  </button>
+                  <input type="range" class="volume-slider" id="player-volume" min="0" max="1" step="0.01" value="0.85" aria-label="Volume" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Playlist Queue -->
+            <div class="player-playlist-column">
+              <div class="playlist-column-header">
+                <span class="pl-header-title">DISCOGRAPHY QUEUE</span>
+                <button type="button" class="pl-shuffle-btn magnetic" id="player-shuffle-btn" title="Randomize Track List" aria-label="Randomize Track List" data-cursor-text="SHUFFLE">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+                  <span>Randomize</span>
+                </button>
+                <span class="pl-header-count">20 TRACKS</span>
+              </div>
+              <div class="playlist-items-scroll" id="player-playlist-list" role="list">
+                <!-- Dynamically populated with all 20 HypnoKai tracks -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card-action-bar">
+          <button type="button" class="pill pill-accent magnetic" data-open-drawer="drawer-audio" data-cursor-text="NOTES">
+            Acoustic Notes &amp; Session Insights
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5L8 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer / Viewport Meta -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <span class="geo-dot"></span>
+      <span>Based in Western Australia.</span>
+    </div>
+
+    <div class="footer-right">
+      <button type="button" class="pill toggle-audio-btn magnetic" data-magnetic-strength="0.3" data-cursor-text="SOUND">
+        <canvas id="audio-visualizer-canvas" width="24" height="14" aria-hidden="true"></canvas>
+        <span class="audio-label-text">[ Audio ]</span>
+      </button>
+
+      <button type="button" class="pill pill-outline magnetic" data-open-drawer="drawer-contact" data-magnetic-strength="0.3" data-cursor-text="TALK">
+        <span>[ Contact ]</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- ==================== Interactive Drawers ==================== -->
+
+  <!-- Drawer 01: Operations Deep-Dive -->
+  <div class="drawer-modal" id="drawer-operations" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop"></div>
+    <div class="drawer-sheet">
+      <div class="drawer-header">
+        <span class="drawer-tag">01 // Operations Architecture</span>
+        <button type="button" class="drawer-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <h3 class="drawer-title">Regional Infrastructure &amp; Operational Scale</h3>
+      <p class="drawer-summary">
+        Managing complex retail environments and multi-hub logistics across Western Australia. Transforming operational friction into deterministic, frictionless workflows through custom-built local tooling.
+      </p>
+
+      <div class="drawer-metrics-grid">
+        <div class="metric-item">
+          <span class="metric-label">Regional Reach</span>
+          <span class="metric-val">Metro WA Network</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Execution Velocity</span>
+          <span class="metric-val">High-Volume Realtime</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Tooling Architecture</span>
+          <span class="metric-val">Local-First &amp; Modular</span>
+        </div>
+      </div>
+
+      <div class="drawer-pillars-list">
+        <div class="pillar-item">
+          <h4>Fleet &amp; Material Logistics</h4>
+          <p>Orchestrating physical distribution chains with tight synchronization, minimizing inventory lag and warehouse buffer variance.</p>
+        </div>
+        <div class="pillar-item">
+          <h4>Proprietary Sales &amp; POS Utilities</h4>
+          <p>Replacing fragile spreadsheet workflows with lightweight, bespoke internal tools built specifically for frontline velocity.</p>
+        </div>
+        <div class="pillar-item">
+          <h4>Team Autonomy &amp; Operational SOPs</h4>
+          <p>Instituting transparent standards that enable staff to make autonomous, high-quality decisions during rapid operational shifts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer 02: Logic & Systems Deep-Dive -->
+  <div class="drawer-modal" id="drawer-logic" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop"></div>
+    <div class="drawer-sheet">
+      <div class="drawer-header">
+        <span class="drawer-tag">02 // Systems &amp; Computation</span>
+        <button type="button" class="drawer-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <h3 class="drawer-title">Computation, Shaders &amp; Mechanics</h3>
+      <p class="drawer-summary">
+        Peeling back abstractions. Studying how computer systems, mathematical transforms, and physical simulations execute from first principles.
+      </p>
+
+      <div class="drawer-metrics-grid">
+        <div class="metric-item">
+          <span class="metric-label">Focus</span>
+          <span class="metric-val">Applied Physics &amp; CS</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Tooling Philosophy</span>
+          <span class="metric-val">Zero-Bloat Native</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Graphics Engine</span>
+          <span class="metric-val">WebGL / Custom GLSL</span>
+        </div>
+      </div>
+
+      <div class="drawer-pillars-list">
+        <div class="pillar-item">
+          <h4>GLSL Chromatic Fresnel Shaders</h4>
+          <p>This site itself runs custom vertex and fragment shaders computing real-time Fresnel reflection, chromatic dispersion, and organic vertex undulation.</p>
+        </div>
+        <div class="pillar-item">
+          <h4>Local-First Architecture</h4>
+          <p>Building offline-capable, snappy applications that store state locally without dependency on remote cloud infrastructure.</p>
+        </div>
+        <div class="pillar-item">
+          <h4>Damped Kinetic Physics Models</h4>
+          <p>Bridging physical mechanical intuition with screen UI through spring-damping, lerp momentum, and tactile feedback.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer 04: Sound & Discography Notes -->
+  <div class="drawer-modal" id="drawer-audio" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop"></div>
+    <div class="drawer-sheet">
+      <div class="drawer-header">
+        <span class="drawer-tag">04 // Discography &amp; Songwriting</span>
+        <button type="button" class="drawer-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <h3 class="drawer-title">Original Songwriting, Vocals &amp; Musical Craft</h3>
+      <p class="drawer-summary">
+        HypnoKai represents the complete musical identity of Kai Thorpe—original songwriting, lead vocal arrangements, multi-instrumental performance, and independent studio tracking. Stepping away from generic ambient soundscapes, every record is an authored piece with harmonic intention, evocative lyrics, and rich analog and digital production.
+      </p>
+
+      <div class="drawer-metrics-grid">
+        <div class="metric-item">
+          <span class="metric-label">Creative Identity</span>
+          <span class="metric-val">Artist &amp; Lead Vocalist</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Musical Scope</span>
+          <span class="metric-val">Original Songwriter</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Studio Execution</span>
+          <span class="metric-val">Multi-Instrumentalist</span>
+        </div>
+      </div>
+
+      <div class="drawer-pillars-list">
+        <div class="pillar-item">
+          <h4>Original Songwriting &amp; Melodic Structure</h4>
+          <p>Composing distinct chord progressions, lyrical themes, and dynamic vocal phrasing crafted from the ground up without templates.</p>
+        </div>
+        <div class="pillar-item">
+          <h4>Lead Vocalist &amp; Expressive Dynamics</h4>
+          <p>Organic, emotive vocal performances tracked with high-definition dynamic preamps and subtle analog saturation.</p>
+        </div>
+        <div class="pillar-item">
+          <h4>Multi-Instrumental Production</h4>
+          <p>Layering live rhythm sections, acoustic instruments, sub-bass architecture, and modular synthesizers into unified master mixes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer: Contact Modal -->
+  <div class="drawer-modal" id="drawer-contact" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop"></div>
+    <div class="drawer-sheet">
+      <div class="drawer-header">
+        <span class="drawer-tag">Direct Communication</span>
+        <button type="button" class="drawer-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+
+      <h3 class="drawer-title">Initiate Contact</h3>
+      <p class="drawer-summary">
+        Based in Western Australia. Available for select operations consulting, software systems architecture, and original music commissions.
+      </p>
+
+      <div class="drawer-social-highlight">
+        <a href="https://instagram.com/hypno_kai" target="_blank" rel="noopener noreferrer" class="drawer-insta-btn magnetic" data-cursor-text="INSTA">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span>Instagram: @hypno_kai</span>
+          <span class="btn-sub">&rarr;</span>
+        </a>
+      </div>
+
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="contact-name">Your Name</label>
+          <input type="text" id="contact-name" placeholder="Name or Organization" required />
+        </div>
+
+        <div class="form-group">
+          <label for="contact-email">Email Address</label>
+          <input type="email" id="contact-email" placeholder="email@domain.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="contact-discipline">Discipline of Interest</label>
+          <input type="text" id="contact-discipline" placeholder="Operations / Logic & Software / Music & Songwriting" />
+        </div>
+
+        <div class="form-group">
+          <label for="contact-message">Message / Scope</label>
+          <textarea id="contact-message" rows="4" placeholder="Brief outline of your inquiry or project..." required></textarea>
+        </div>
+
+        <button type="submit" class="pill pill-accent magnetic" data-cursor-text="SEND">
+          Transmit Message
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L8 2m5 5L8 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main JavaScript App -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
