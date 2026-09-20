@@ -1,0 +1,14 @@
+.git
+.git/**
+.wrangler
+.wrangler/**
+.gitignore
+.assetsignore
+.DS_Store
+**/.DS_Store
+*.code-workspace
+wrangler.jsonc
+package.json
+package-lock.json
+node_modules
+node_modules/**
