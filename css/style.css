@@ -393,61 +393,24 @@ body::after {
 
 /* --- Viewport: Landing / Hero --- */
 .hero-viewport {
-  min-height: 80vh;
+  min-height: 72vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   padding-top: 6.5rem;
-  padding-bottom: 2rem;
-}
-
-.hero-headline {
-  font-size: clamp(2.4rem, 6.2vw, 4.8rem);
-  font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  color: var(--text-main);
-  margin-bottom: 1.4rem;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  perspective: 1200px;
-  transform-style: preserve-3d;
-}
-
-.hero-word {
-  display: inline-flex;
-  align-items: center;
-  transform-style: preserve-3d;
-}
-
-.hero-space {
-  display: inline-block;
-  width: 0.35em;
-}
-
-.hero-char {
-  display: inline-block;
-  will-change: transform, opacity, filter;
-  transition: transform 0.08s linear, opacity 0.08s linear, filter 0.08s linear;
-  transform-style: preserve-3d;
-}
-
-.hero-char.period {
-  color: var(--accent-cyan);
-  display: inline-block;
-  text-shadow: 0 0 24px var(--accent-cyan);
+  padding-bottom: 2.5rem;
 }
 
 .hero-subheadline {
-  font-size: clamp(1.2rem, 3.2vw, 2.0rem);
-  font-weight: 400;
-  color: var(--text-muted);
-  letter-spacing: -0.02em;
-  max-width: 680px;
-  margin-bottom: 2.8rem;
-  line-height: 1.35;
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  font-weight: 500;
+  color: var(--text-main);
+  letter-spacing: -0.035em;
+  max-width: 840px;
+  margin-bottom: 2.6rem;
+  line-height: 1.15;
 }
 
 .nav-index-container {

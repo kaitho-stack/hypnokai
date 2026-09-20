@@ -89,10 +89,7 @@ class App {
 
   initHeroHeadlineDispersal() {
     const headline = document.getElementById('hero-headline');
-    if (!headline) return;
-
-    const chars = Array.from(headline.querySelectorAll('.hero-char'));
-    if (!chars.length) return;
+    const chars = headline ? Array.from(headline.querySelectorAll('.hero-char')) : [];
 
     // Custom 3D explosion vectors for each letter
     const vectors = [
@@ -109,14 +106,8 @@ class App {
     ];
 
     this.updateHeroDispersal = (scrollY) => {
-      // Calculate title position relative to document
-      const headlineTop = headline.offsetTop;
-      const headlineHeight = headline.offsetHeight;
-      const halfwayPastTitle = headlineTop + headlineHeight * 0.5;
-
-      // When user scrolls halfway past the title text, letters break apart
-      const triggerThreshold = Math.max(50, halfwayPastTitle * 0.45);
-      const dispersalDistance = 300;
+      const triggerThreshold = 40;
+      const dispersalDistance = 350;
 
       let progress = 0;
       if (scrollY > triggerThreshold) {
@@ -125,31 +116,33 @@ class App {
 
       const easeProgress = Math.pow(progress, 1.25);
 
-      chars.forEach((char, i) => {
-        const v = vectors[i % vectors.length];
-        if (progress <= 0.001) {
-          char.style.transform = '';
-          char.style.opacity = '1';
-          char.style.filter = '';
-          char.style.mixBlendMode = '';
-          char.style.textShadow = '';
-        } else {
-          const dx = v.x * easeProgress;
-          const dy = v.y * easeProgress;
-          const dz = v.z * easeProgress;
-          const rz = v.rz * easeProgress;
-          const rx = v.rx * easeProgress;
-          const scale = 1 + (v.s - 1) * easeProgress;
-          const blur = easeProgress * 16;
-          const opacity = Math.max(0, 1 - easeProgress * 1.05);
+      if (chars.length) {
+        chars.forEach((char, i) => {
+          const v = vectors[i % vectors.length];
+          if (progress <= 0.001) {
+            char.style.transform = '';
+            char.style.opacity = '1';
+            char.style.filter = '';
+            char.style.mixBlendMode = '';
+            char.style.textShadow = '';
+          } else {
+            const dx = v.x * easeProgress;
+            const dy = v.y * easeProgress;
+            const dz = v.z * easeProgress;
+            const rz = v.rz * easeProgress;
+            const rx = v.rx * easeProgress;
+            const scale = 1 + (v.s - 1) * easeProgress;
+            const blur = easeProgress * 16;
+            const opacity = Math.max(0, 1 - easeProgress * 1.05);
 
-          char.style.transform = `translate3d(${dx.toFixed(1)}px, ${dy.toFixed(1)}px, ${dz.toFixed(1)}px) rotateZ(${rz.toFixed(1)}deg) rotateX(${rx.toFixed(1)}deg) scale(${scale.toFixed(2)})`;
-          char.style.opacity = opacity.toFixed(3);
-          char.style.filter = `blur(${blur.toFixed(1)}px)`;
-          char.style.mixBlendMode = 'screen';
-          char.style.textShadow = `0 0 ${Math.round(easeProgress * 20)}px ${v.col}, 0 0 ${Math.round(easeProgress * 40)}px rgba(0, 245, 212, 0.4)`;
-        }
-      });
+            char.style.transform = `translate3d(${dx.toFixed(1)}px, ${dy.toFixed(1)}px, ${dz.toFixed(1)}px) rotateZ(${rz.toFixed(1)}deg) rotateX(${rx.toFixed(1)}deg) scale(${scale.toFixed(2)})`;
+            char.style.opacity = opacity.toFixed(3);
+            char.style.filter = `blur(${blur.toFixed(1)}px)`;
+            char.style.mixBlendMode = 'screen';
+            char.style.textShadow = `0 0 ${Math.round(easeProgress * 20)}px ${v.col}, 0 0 ${Math.round(easeProgress * 40)}px rgba(0, 245, 212, 0.4)`;
+          }
+        });
+      }
 
       // Mix into 3D glass background graphic
       if (this.stage && typeof this.stage.setHeroDispersalProgress === 'function') {
