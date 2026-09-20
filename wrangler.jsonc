@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hypnokai",
+  "compatibility_date": "2026-09-20",
+  "workers_dev": true,
+  "assets": {
+    "directory": "."
+  },
+  "routes": [
+    {
+      "pattern": "hypnokai.com/*",
+      "zone_name": "hypnokai.com"
+    },
+    {
+      "pattern": "www.hypnokai.com/*",
+      "zone_name": "hypnokai.com"
+    }
+  ]
+}

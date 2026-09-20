@@ -8,7 +8,8 @@ export const PROFILE_DATA = {
       { id: "operations", label: "01 // Operations" },
       { id: "logic", label: "02 // Logic" },
       { id: "hypnokai", label: "03 // HypnoKai" },
-      { id: "audio", label: "04 // Music Player" }
+      { id: "amoc-section", label: "04 // AMOC Observatory" },
+      { id: "audio", label: "05 // Music Player" }
     ]
   },
   sections: [

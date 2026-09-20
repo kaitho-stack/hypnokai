@@ -159,7 +159,7 @@ class App {
   }
 
   updateNavHighlight(scrollY) {
-    const sections = ['operations', 'logic', 'hypnokai', 'audio'];
+    const sections = ['operations', 'logic', 'hypnokai', 'amoc-section', 'audio'];
     const navItems = document.querySelectorAll('.nav-index-link');
 
     let currentSection = '';
@@ -234,6 +234,7 @@ class App {
       this.volSlider.addEventListener('input', (e) => {
         this.audio.setVolume(parseFloat(e.target.value));
       });
+    }
     if (this.muteBtn) {
       this.muteBtn.addEventListener('click', () => {
         const isMuted = this.audio.toggleMute();
